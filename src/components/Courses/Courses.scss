@@ -1,0 +1,78 @@
+@import "~bootstrap/scss/bootstrap-grid";
+
+.courses-container {
+    margin-top: 30px;
+
+    .courses {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .course {
+            margin-bottom: 30px;
+            width: 100%;
+            overflow: hidden;
+
+            @include media-breakpoint-up(lg) {
+                width: 45%;
+            }
+
+            .card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+
+                .card-title {
+                    display: flex;
+                    align-items: center;
+
+                    .avatar {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100px;
+                        overflow: hidden;
+                        margin-right: 15px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .teacher-name > div {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .card-body {
+                .info {
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    @include media-breakpoint-up(md) {
+                        flex-direction: row;
+                    }
+
+                    & > div:first-child {
+                        font-weight: bold;
+
+                        svg {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    &.info-text {
+                        flex-direction: column;
+
+                        & > div:nth-child(2) {
+                            white-space: pre-wrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

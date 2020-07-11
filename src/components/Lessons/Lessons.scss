@@ -1,0 +1,92 @@
+@import "~bootstrap/scss/bootstrap-grid";
+
+.lessons-container {
+    margin-top: 30px;
+
+    .lessons {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .lesson {
+            margin-bottom: 30px;
+            width: 100%;
+            overflow: hidden;
+
+            @include media-breakpoint-up(lg) {
+                width: 45%;
+            }
+
+            .card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+
+                .card-title {
+                    margin-bottom: 0;
+
+                    & > svg {
+                        margin-right: 10px;
+                    }
+                }
+
+                .feedback-badge {
+                    position: relative;
+                    cursor: pointer;
+
+                    .feedback-icon {
+                        font-size: 20px;
+                    }
+
+                    & > span {
+                        position: absolute;
+                        color: white;
+                        width: 16px;
+                        display: inline-block;
+                        height: 16px;
+                        text-align: center;
+                        line-height: 16px;
+                        border-radius: 100%;
+                        top: -12px;
+                        right: -10px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lesson-feedbacks-modal {
+    .modal-title {
+        & > span {
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+
+    .feedback {
+        margin-bottom: 30px;
+        padding: 0 20px;
+
+        .feedback-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .feedback-rating {
+            display: flex;
+            align-items: center;
+
+            & > div {
+                margin-right: 5px;
+            }
+        }
+
+        .feedback-note {
+            text-align: justify;
+            white-space: pre-wrap;
+        }
+    }
+}

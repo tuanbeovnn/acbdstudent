@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -rf build
+npm run build
+scp -i ../vps/bee-keypair.pem -r build ubuntu@ec2-54-255-166-199.ap-southeast-1.compute.amazonaws.com:/home/ubuntu/student-management/
